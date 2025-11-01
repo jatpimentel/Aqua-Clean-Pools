@@ -110,7 +110,217 @@ html, body, #root {
 
 /* MAIN CONTENT */
 .main-content {
-  text-align: center;
-  padding: 5rem 1rem;
+  position: relative;
+  text-align: left;
+  padding: 5rem 2rem;
   color: #023e8a;
+  background-image: url('./assets/images/Front Page Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Blue info card */
+.info-card {
+  background-color: #0096c7;
+  color: #ffffff;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trusted-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  color: #333333; /* changed color */
+}
+
+.info-card h1 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333333; /* changed color */
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: #0077b6;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #caf0f8;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.services-section h2 {
+  color: #00a6d6;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-section .subtitle {
+  color: #333333;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card {
+  width: 380px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-wrapper h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: 700;
+}
+
+/* === SERVICES DETAILED SECTION === */
+.services-detailed {
+  width: 100%;
+  padding: 80px 5%;
+  background: #fff;
+  text-align: center;
+}
+
+.services-detailed h2 {
+  font-size: 2.2rem;
+  color: #008ecc;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.services-detailed .subtext {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* --- Card container --- */
+.service-pairs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* --- Individual cards --- */
+.service-pair {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-pair:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Image --- */
+.service-image img {
+  width: 100%;
+  height: 400px; /* ✅ Make image taller */
+  object-fit: cover;
+  border-bottom: 3px solid #00aaff;
+}
+
+/* --- Text content --- */
+.service-text {
+  padding: 2rem 2.5rem;
+  text-align: left;
+}
+
+.service-text h3 {
+  color: #00aaff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-text p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Bullet points for list --- */
+.service-text ul {
+  margin-left: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* --- Responsive for smaller screens --- */
+@media (max-width: 900px) {
+  .service-pairs {
+    grid-template-columns: 1fr;
+  }
+
+  .service-pair {
+    height: auto;
+  }
+
+  .service-image img {
+    height: 300px;
+  }
 }
