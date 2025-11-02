@@ -7,6 +7,11 @@ import ReplacementsImg from './assets/images/Replacements.webp'
 import MaintenanceImg from './assets/images/Maintainance.webp'
 import Service1 from './assets/images/Service1.webp'
 import Service2 from './assets/images/Service2.webp'
+import OurStoryImg from './assets/images/OurStory.webp'
+import OurMissionImg from './assets/images/OurMission.webp'
+import CustomService1 from "./assets/images/CustomService1.webp";
+import CustomService2 from "./assets/images/CustomService2.webp";
+import ContactUs from "./assets/images/ContactUs.webp";
 
 function App() {
   const [active, setActive] = useState('Home')
@@ -138,6 +143,114 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="highlights-section">
+  <div className="highlight">
+    <div className="highlight-icon">💰</div>
+    <h3>Free Estimates</h3>
+    <p>
+      Get a free, no-obligation quote and discover why customers rate us 5 stars
+      for quality and service.
+    </p>
+  </div>
+
+  <div className="highlight">
+    <div className="highlight-icon">💬</div>
+    <h3>Free Quotes</h3>
+    <p>
+      We make it easy — free quotes, fair pricing, and 5-star results every time.
+    </p>
+  </div>
+
+  <div className="highlight">
+    <div className="highlight-icon">⭐</div>
+    <h3>5 Star Reviews</h3>
+    <p>
+      Rated 5 Stars by Happy Pool Owners — Trusted for Quality, Care, and Results.
+    </p>
+  </div>
+</section>
+
+<section className="about-section">
+  <h2>About Us – Aqua Clean Pools</h2>
+  <p className="subtitle">Family-Owned. Reliable. Built on Trust.</p>
+
+  {/* === Our Story === */}
+  <div className="about-container">
+    <div className="about-text">
+      <h3>Our Story</h3>
+      <p>
+        What started as a small, local business built on word-of-mouth and hard work
+        has grown into a trusted name in pool and spa care. <b>Ruben Casas</b> founded
+        Aqua Clean Pools with a simple goal: to give every customer the same level of
+        care and attention he gives his own family’s pool.
+      </p>
+      <p>
+        With <b>years</b> of hands-on experience in the pool industry, Ruben brings an eye for
+        detail, technical know-how, and a genuine passion for helping customers enjoy safe,
+        sparkling, and stress-free pools all year long.
+      </p>
+    </div>
+    <div className="about-image">
+      <img src={OurStoryImg} alt="Our Story" />
+    </div>
+  </div>
+
+  {/* === Our Mission === */}
+  <div className="about-container">
+    <div className="about-image">
+      <img src={OurMissionImg} alt="Our Mission" />
+    </div>
+    <div className="about-text">
+      <h3>Our Mission</h3>
+      <p>
+        At <b>Aqua Clean Pools</b>, we believe that a clean pool means more than clear
+        water—it means <b>peace of mind</b>. Our mission is to help families and property
+        owners enjoy their pools and spas without worrying about maintenance, repairs,
+        or chemical balance. You relax, we’ll handle the rest.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* === Custom Services Section === */}
+<section className="custom-services-section">
+  <div className="custom-services-container">
+    <div className="custom-text">
+      <h3>For Custom Services</h3>
+      <p>
+        Every pool is unique — and so are your needs.<br />
+        Our custom pool services are designed to fit.
+      </p>
+      <button className="custom-btn">Contact Us</button>
+    </div>
+
+    <div className="custom-images">
+      <img src={CustomService1} alt="Custom pool service 1" />
+      <img src={CustomService2} alt="Custom pool service 2" />
+    </div>
+  </div>
+</section>
+
+{/* === Contact Section === */}
+<section className="contact-section">
+  <div className="contact-container">
+    <div className="contact-text">
+      <h3>Contact Us</h3>
+      <p>
+        <span>📞</span> 714-604-8591
+      </p>
+      <p>
+        <span>📧</span> info@aquacleanyourpool.com
+      </p>
+    </div>
+    <div className="contact-image">
+      <img src={ContactUs} alt="Contact Aqua Clean Pools" />
+    </div>
+  </div>
+</section>
+
+
     </>
   )
 }

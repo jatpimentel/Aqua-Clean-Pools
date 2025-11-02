@@ -324,3 +324,242 @@ html, body, #root {
     height: 300px;
   }
 }
+
+/* === Highlights Section === */
+.highlights-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 80px 5%;
+  background: #fff;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.highlight h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.highlight p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .highlights-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight {
+    max-width: 400px;
+  }
+}
+
+/* === About Section === */
+.about-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0077cc; /* ✅ Blue About Us text */
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 auto 80px auto;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.about-text p {
+  margin-bottom: 16px; /* adds space between paragraphs */
+  line-height: 1.7;
+}
+
+/* ✅ Image styling — now both story & mission images match */
+.about-image img {
+  width: 100%;
+  max-width: 750px; /* same size for both */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional hover effect */
+.about-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Reverse layout for alternating look */
+.about-container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-container.reverse {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+
+/* === Custom Services === */
+.custom-services-section {
+  background-color: #e0f5fc;
+  padding: 60px 0;
+}
+
+.custom-services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.custom-text {
+  flex: 1;
+  text-align: left;
+  max-width: 420px;
+}
+
+.custom-text h3 {
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.custom-text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.custom-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #005bb5;
+}
+
+.custom-images {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.custom-images img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* === Contact Section === */
+.contact-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-text h3 {
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.contact-text p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
