@@ -73,7 +73,7 @@ function App() {
             crystal clear and hassle-free.
           </p>
           <a href="#contact">
-            <button class="cta-btn">Contact Us Now</button>
+            <button className="cta-btn">Contact Us Now</button>
           </a>
         </div>
       </section>
