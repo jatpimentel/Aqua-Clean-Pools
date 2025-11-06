@@ -5,85 +5,84 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f8fafa;
 }
 
-/* NAVBAR */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === NAVBAR === */
 .navbar {
+  position: fixed; /* makes it stay on screen */
+  top: 0; /* pins it to the top */
+  left: 0;
+  width: 100%; /* full width */
+  z-index: 1000; /* ensures it stays above other content */
+  background-color: white; /* keeps it visible even on white backgrounds */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  width: 100%;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.brand-name {
-  color: #0077b6;
-  font-weight: 700;
+.logo-section img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
-/* NAV LINKS */
+/* === NAV LINKS === */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 2rem;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #0077b6;
+.nav-button {
+  background: transparent;
+  border: 2px solid transparent; /* hidden border by default */
+  color: #00a3d7;
+  font-size: 16px;
   font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  padding: 6px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none; /* removes black outline */
 }
 
-.nav-links a:hover {
-  background-color: rgba(0, 119, 182, 0.05);
+.nav-button:focus,
+.nav-button:active {
+  border: 2px solid #00a3d7; /* blue border only when clicked/focused */
+  outline: none; /* removes default black browser outline */
 }
 
-.nav-links a.active {
-  border: 1px solid #00b4d8;
-  color: #0077b6;
-}
-
-/* HAMBURGER ICON */
+/* === MOBILE MENU === */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
   cursor: pointer;
 }
 
 .menu-toggle span {
-  width: 25px;
   height: 3px;
-  background: #0077b6;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  width: 25px;
+  background: #333;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
-/* Animate hamburger into “X” */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-/* RESPONSIVE */
+/* === MOBILE STYLES === */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -92,15 +91,13 @@ html, body, #root {
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 0;
-    width: 100%;
+    background: white;
     flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    gap: 1.5rem;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.open {
@@ -114,7 +111,7 @@ html, body, #root {
   text-align: left;
   padding: 5rem 2rem;
   color: #023e8a;
-  background-image: url('./assets/images/Front Page Background.jpg');
+  background-image: url("./assets/images/Front Page Background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,6 +161,13 @@ html, body, #root {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  outline: none; /* ✅ removes black outline */
+}
+
+.cta-btn:focus,
+.cta-btn:active {
+  outline: none; /* ✅ prevents outline when clicked/focused */
+  box-shadow: none; /* ✅ optional: removes any browser glow */
 }
 
 .cta-btn:hover {
@@ -413,6 +417,12 @@ html, body, #root {
   max-width: 480px;
   line-height: 1.7;
 }
+.about-text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00aaff;
+  margin-bottom: 12px; /* ✅ Adds clean space before the paragraph */
+}
 
 .about-text p {
   margin-bottom: 16px; /* adds space between paragraphs */
@@ -434,8 +444,6 @@ html, body, #root {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-
-
 
 /* Reverse layout for alternating look */
 .about-container.reverse {
@@ -504,8 +512,14 @@ html, body, #root {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  outline: none;
 }
 
+.custom-btn:focus,
+.custom-btn:active {
+  outline: none; /* ✅ prevents outline when clicked/focused */
+  box-shadow: none; /* ✅ optional: removes any browser glow */
+}
 .custom-btn:hover {
   background-color: #005bb5;
 }
@@ -563,3 +577,115 @@ html, body, #root {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* === FOOTER STYLING === */
+.footer {
+  background-color: #ffffff;
+  padding: 50px 10%;
+  border-top: 1px solid #e6e6e6;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+/* Left Section */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left h4 {
+  color: #009fe3;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.footer-email {
+  color: #b3b3b3;
+}
+
+/* Right Section (now left-aligned) */
+.footer-right {
+  flex: 0 0 auto;
+  text-align: left; /* ✅ Left-aligned */
+  min-width: 150px;
+}
+
+.footer-right h5 {
+  color: #b3b3b3;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: left; /* ✅ Left-aligned title */
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0; /* ✅ Removes padding */
+  margin: 0; /* ✅ Removes extra spacing too */
+  text-align: left;
+}
+
+.footer-right ul li {
+  margin-bottom: 4px;
+}
+
+.footer-right button {
+  background: none;
+  border: none;
+  color: #009fe3;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-align: left;
+  display: inline-block;
+  padding: 0; /* ✅ Removes button padding */
+  margin: 0; /* ✅ Keeps it tight */
+}
+
+.footer-right button:hover {
+  text-decoration: underline;
+  color: #0077b6;
+}
+
+/* Divider & bottom text */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #eaeaea;
+  margin: 15px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #009fe3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
