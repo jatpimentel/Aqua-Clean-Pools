@@ -689,3 +689,192 @@ html {
     font-size: 0.85rem;
   }
 }
+
+/* === GLOBAL RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo-section img {
+    height: 60px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-button {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .main-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+  }
+
+  .info-card {
+    max-width: 90%;
+    padding: 1.8rem;
+  }
+
+  .info-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Services Detailed Section */
+  .services-detailed {
+    padding: 60px 20px;
+  }
+
+  .service-pairs {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image img {
+    height: 250px;
+  }
+
+  .service-text {
+    padding: 1.5rem;
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Custom Services Section */
+  .custom-services-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .custom-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .custom-images {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .custom-images img {
+    max-width: 100%;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .contact-text {
+    text-align: center;
+  }
+
+  .contact-image img {
+    max-width: 250px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: left;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+/* For very small devices (phones < 480px) */
+@media (max-width: 480px) {
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .info-card h1 {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.3rem;
+  }
+
+  .service-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .custom-btn {
+    width: 100%;
+  }
+
+  .footer-left p,
+  .footer-right button {
+    font-size: 0.9rem;
+  }
+}
