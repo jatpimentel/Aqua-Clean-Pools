@@ -117,6 +117,35 @@ function App() {
         </div>
       </section>
 
+      <section className="highlights-section">
+        <div className="highlight">
+          <div className="highlight-icon">💰</div>
+          <h3>Free Estimates</h3>
+          <p>
+            Get a free, no-obligation quote and discover why customers rate us 5
+            stars for quality and service.
+          </p>
+        </div>
+
+        <div className="highlight">
+          <div className="highlight-icon">💬</div>
+          <h3>Free Quotes</h3>
+          <p>
+            We make it easy — free quotes, fair pricing, and 5-star results
+            every time.
+          </p>
+        </div>
+
+        <div className="highlight">
+          <div className="highlight-icon">⭐</div>
+          <h3>5 Star Reviews</h3>
+          <p>
+            Rated 5 Stars by Happy Pool Owners — Trusted for Quality, Care, and
+            Results.
+          </p>
+        </div>
+      </section>
+
       {/* === ABOUT SECTION === */}
       <section id="about" className="about-section">
         <h2>About Us – Aqua Clean Pools</h2>
